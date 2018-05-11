@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: microservice-config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/wbowbo/SpringCloud.git/
+          search-paths: SpringCloud-Learning/SpringCloud-Config
+          username: bestwangbo@126.com
+          password: 520wbowbo
+server:
+  port: 6110
+eureka:
+  client:
+    healthcheck:
+      enabled: true
+    serviceUrl:
+      defaultZone: http://user:password123@localhost:8761/eureka
+  instance:
+    prefer-ip-address: true

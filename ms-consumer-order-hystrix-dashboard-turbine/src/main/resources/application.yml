@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: microservice-consumer-movie-hystrix-dashboard-turbine
+server:
+  port: 9030
+management:
+  port: 9039
+eureka:
+  client:
+    healthcheck:
+      enabled: true
+    serviceUrl:
+      defaultZone: http://user:password123@localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
+    
+turbine:
+  app-config: microservice-consumer-movie-hystrix,microservice-consumer-movie-hystrix2
+  cluster-name-expression: "'default'"
+  combine-host-port: true
